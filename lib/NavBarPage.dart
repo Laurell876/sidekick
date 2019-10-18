@@ -14,10 +14,7 @@ class _NavBarPageState extends State<NavBarPage> {
   int _selectedIndex = 0;
   static  TextStyle optionStyle = TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static  List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
+    HomePage(),
 
     Text(
       'Index 1: Business',
