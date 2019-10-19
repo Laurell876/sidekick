@@ -46,6 +46,7 @@ flutter:
   #  - images/a_dot_ham.jpeg
   assets:
     - assets/taylor.png
+    - assets/sunny.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -65,6 +66,12 @@ flutter:
     - family: Roboto
       fonts:
         - asset: fonts/Roboto-Regular.ttf
+        - asset: fonts/Roboto-Light.ttf
+          weight: 100
+        - asset: fonts/Roboto-Thin.ttf
+          weight: 200
+
+
   # fonts:
   #   - family: Schyler
   #     fonts:

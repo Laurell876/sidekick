@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sidekick/HomePage.dart';
+import 'package:sidekick/TimetablePage.dart';
 
 
 class NavBarPage extends StatefulWidget {
@@ -20,10 +21,7 @@ class _NavBarPageState extends State<NavBarPage> {
       'Index 1: Business',
       style: optionStyle,
     ),
-    Text(
-      'Index 2: School',
-      style: optionStyle,
-    ),
+    TimetablePage(),
 
   ];
 
@@ -38,6 +36,7 @@ class _NavBarPageState extends State<NavBarPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xfffff5f8),
       appBar: AppBar(
         backgroundColor: Colors.white,
         title: Column(
@@ -113,10 +112,7 @@ class _NavBarPageState extends State<NavBarPage> {
 
 
       ),
-      body:
-
-
-      Center(
+      body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
 
@@ -138,7 +134,7 @@ class _NavBarPageState extends State<NavBarPage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.event),
-            title: Text('Events',
+            title: Text('Notes',
               style: TextStyle(
                 fontSize: 15,
               ),
