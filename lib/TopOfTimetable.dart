@@ -20,7 +20,7 @@ class TopOfTimetable extends StatelessWidget {
 
 
         SizedBox(
-          height:300, //gives it a specific height, card matches this height
+          height:250, //gives it a specific height, card matches this height
           child: Column( //necessary for some reason
             children: <Widget>[
               Expanded( //makes it take up the entire given height
@@ -49,6 +49,7 @@ class TopOfTimetable extends StatelessWidget {
 
         SizedBox(height:50),
         UpComingCard(),
+        SizedBox(height:40),
 
 
 

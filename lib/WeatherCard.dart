@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class WeatherCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return                              Padding(
+    return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
         decoration: BoxDecoration(
@@ -13,18 +13,11 @@ class WeatherCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(30.0)
         ),
 
-        width: 300.0,
+        width: 250.0,
 //                              color: Colors.white,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.center,
+        child: ListView(
+          scrollDirection: Axis.vertical,
           children: <Widget>[
-
-            Container(
-
-
-              child: Column(
-                children: <Widget>[
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 14, horizontal:15.0),
                     child: Row(
@@ -32,14 +25,14 @@ class WeatherCard extends StatelessWidget {
                       children: <Widget>[
 
                         Image.asset('assets/sunny.png',
-                          height:50,
-                          width:60,
+                          height:40,
+                          width:50,
                         ),
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal:20.0),
                           child: Text('Sunny',
                             style: TextStyle(
-                              fontSize: 25,
+                              fontSize: 20,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -58,7 +51,7 @@ class WeatherCard extends StatelessWidget {
                         '21',
                         style: TextStyle(
                           fontFamily: 'Roboto',
-                          fontSize: 80,
+                          fontSize: 50,
 
                           fontWeight: FontWeight.w200,
                         ),
@@ -68,7 +61,7 @@ class WeatherCard extends StatelessWidget {
                         children: <Widget>[
                           Text('o',
                             style:TextStyle(
-                              fontSize: 20,
+                              fontSize: 10,
                             ),
                           ),
                           Text(
@@ -76,7 +69,7 @@ class WeatherCard extends StatelessWidget {
                             style: TextStyle(
                               fontFamily: 'Roboto',
                               fontWeight: FontWeight.w200,
-                              fontSize: 40,
+                              fontSize: 20,
                             ),
                           ),
                         ],
@@ -86,27 +79,19 @@ class WeatherCard extends StatelessWidget {
 
                     ],
                   ),
-                ],
-              ),
-            ),
-
-
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical:12.0),
-              child: Text('8:00',
-                style: TextStyle(
-                  fontSize: 20,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical:12.0),
+                  child: Text('8:00',
+                    style: TextStyle(
+                      fontSize: 20,
+                    ),
+                  ),
                 ),
-              ),
+              ],
             ),
-
-
-
-
-
-
-
-
 
           ],
         ),

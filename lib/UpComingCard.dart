@@ -5,10 +5,10 @@ class UpComingCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height:250,
-      width:350,
+      height:200,
+      width:300,
       decoration: BoxDecoration(
-        color: Color(0xff9bdeac),
+        color: Color(0xfff5d2ff),
           borderRadius: BorderRadius.circular(30.0),
       ),
       child: Padding(

@@ -129,7 +129,7 @@ class SignUpPage extends StatelessWidget {
                         Text(
                           'LOGIN',
                           style: TextStyle(
-                            color: Colors.black,
+                            color: Colors.pink,
 
                           ),
                         ),

@@ -18,6 +18,6 @@ void main()=>runApp(MaterialApp(
 
     debugShowCheckedModeBanner: false,
   routes: {
-    '/': (context)=>NavBarPage()
+    '/': (context)=>NavBarPage(),
   }
 ));

@@ -103,7 +103,7 @@ class LoginPage extends StatelessWidget {
                         Text(
                           'REGISTER',
                           style: TextStyle(
-                            color: Colors.black,
+                            color: Colors.pink,
 
                           ),
                         ),

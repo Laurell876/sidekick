@@ -4,10 +4,10 @@ class DayOfWeekCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width:350,
+      width:300,
 
       decoration: BoxDecoration(
-        color: Color(0xfff5d2ff),
+        color: Color(0xffBC9BF4),
         borderRadius: BorderRadius.circular(20.0),
       ),
       child: ListView(

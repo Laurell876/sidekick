@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sidekick/HomePage.dart';
 import 'package:sidekick/TimetablePage.dart';
-
+import 'package:sidekick/NotesPage.dart';
 
 class NavBarPage extends StatefulWidget {
   @override
@@ -17,10 +17,7 @@ class _NavBarPageState extends State<NavBarPage> {
   static  List<Widget> _widgetOptions = <Widget>[
     HomePage(),
 
-    Text(
-      'Index 1: Business',
-      style: optionStyle,
-    ),
+    NotesPage(),
     TimetablePage(),
 
   ];
@@ -41,53 +38,54 @@ class _NavBarPageState extends State<NavBarPage> {
         backgroundColor: Colors.white,
         title: Column(
           children: <Widget>[
-            Row(
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
 
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-
-
-
-
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
 
 
-                Container(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: <Widget>[
-                      Container(
 
 
-                        child: Icon(
 
-                          Icons.event_note,
-                          size: 30.0,
-                          color: Colors.pinkAccent,
+
+                  Container(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: <Widget>[
+                        Container(
+
+
+                          child: Icon(
+
+                            Icons.event_note,
+                            size: 30.0,
+                            color: Colors.pinkAccent,
+                          ),
                         ),
-                      ),
-                      SizedBox(
-                        width:6,
-                      ),
-
-                      const Text('Sidekick',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontFamily: 'OleoScript',
-                          fontSize: 25,
+                        SizedBox(
+                          width:6,
                         ),
-                      ),
-                    ],
+
+                        const Text('Sidekick',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontFamily: 'OleoScript',
+                            fontSize: 25,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
 
-                Container(
-                    child: Icon(
-                      Icons.more_vert,
-                      size: 30.0,
-                      color: Colors.pinkAccent,
-                    )
-                ),
-
+                  Container(
+                      child: Icon(
+                        Icons.more_vert,
+                        size: 30.0,
+                        color: Colors.pinkAccent,
+                      )
+                  ),
 
 
 
@@ -95,7 +93,9 @@ class _NavBarPageState extends State<NavBarPage> {
 
 
 
-              ],
+
+                ],
+              ),
             ),
 
 
