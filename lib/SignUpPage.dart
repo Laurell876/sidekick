@@ -13,12 +13,25 @@ class SignUpPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              Text(
-                'SIDEKICK',
-                style: TextStyle(
-                  fontFamily: 'OleoScript',
-                  fontSize: 50,
-                ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    'SIDE',
+                    style: TextStyle(
+                      fontFamily: 'OleoScript',
+                      fontSize: 50,
+                    ),
+                  ),
+                  Text(
+                    'KICK',
+                    style: TextStyle(
+                      fontFamily: 'OleoScript',
+                      fontSize: 50,
+                      color:Colors.pink,
+                    ),
+                  ),
+                ],
               ),
 
 
@@ -126,11 +139,17 @@ class SignUpPage extends StatelessWidget {
                               fontSize: 15
                           ),
                         ),
-                        Text(
-                          'LOGIN',
-                          style: TextStyle(
-                            color: Colors.pink,
+                        GestureDetector(
+                          onTap: (){
+                            Navigator.pushNamed(context, '/Login');
+                          },
 
+                          child: Text(
+                            'LOGIN',
+                            style: TextStyle(
+                              color: Colors.pink,
+
+                            ),
                           ),
                         ),
                       ],
@@ -144,22 +163,27 @@ class SignUpPage extends StatelessWidget {
 
 
 
-              ClipRRect(
-                borderRadius: BorderRadius.circular(30.0),
-                child: Container(
-                  width:300,
-                  height:45,
-                  color:Colors.black,
-                  child: FlatButton(
-                    onPressed: null,
-                    child: Text(
-                      'SIGNUP',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
+              GestureDetector(
+                onTap: (){
+                  Navigator.pushNamed(context, '/NavBarPage');
+                },
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(30.0),
+                  child: Container(
+                    width:300,
+                    height:45,
+                    color:Colors.black,
+                    child: FlatButton(
+                      onPressed: null,
+                      child: Text(
+                        'SIGNUP',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                        ),
                       ),
-                    ),
 
+                    ),
                   ),
                 ),
               ),

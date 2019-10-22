@@ -35,48 +35,35 @@ class _NavBarPageState extends State<NavBarPage> {
     return Scaffold(
       backgroundColor: Color(0xfffff5f8),
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.white,
-        title: Column(
-          children: <Widget>[
-            Padding(
+        title: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Row(
-
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-
-
-
-
-
-
-                  Container(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: <Widget>[
-                        Container(
-
-
-                          child: Icon(
-
-                            Icons.event_note,
-                            size: 30.0,
-                            color: Colors.pinkAccent,
-                          ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: <Widget>[
+                      Container(
+                        child: Icon(
+                          Icons.event_note,
+                          size: 25.0,
+                          color: Colors.pinkAccent,
                         ),
-                        SizedBox(
-                          width:6,
-                        ),
+                      ),
+                      SizedBox(
+                        width:6,
+                      ),
 
-                        const Text('Sidekick',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontFamily: 'OleoScript',
-                            fontSize: 25,
-                          ),
+                      const Text('Sidekick',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontFamily: 'OleoScript',
+                          fontSize: 25,
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
 
                   Container(
@@ -86,14 +73,6 @@ class _NavBarPageState extends State<NavBarPage> {
                         color: Colors.pinkAccent,
                       )
                   ),
-
-
-
-
-
-
-
-
                 ],
               ),
             ),
@@ -105,8 +84,7 @@ class _NavBarPageState extends State<NavBarPage> {
 //                color: Colors.black,
 //              ),
 //            ),
-          ],
-        ),
+
 
 
 

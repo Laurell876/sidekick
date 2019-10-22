@@ -67,31 +67,39 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
 
-                SizedBox(
-                  height: 180,
-                  child: Column(
-                    children: <Widget>[
-                      Expanded(
-                        child: ListView(
-                          shrinkWrap: true,
-                          // This next line does the trick.
-                          scrollDirection: Axis.horizontal,
-                          children: <Widget>[
+                Column(
+                  children: <Widget>[
+                    SizedBox(
+                      height: 180,
+                      child: Column(
+                        children: <Widget>[
+                          Expanded(
+                            child: ListView(
+                              shrinkWrap: true,
+                              // This next line does the trick.
+                              scrollDirection: Axis.horizontal,
+                              children: <Widget>[
 
-                            SizedBox(width:10),
-                            WeatherCard(),
-                            SizedBox(width:10),
-                            WeatherCard(),
-                            SizedBox(width:10),
-                            WeatherCard(),
+                                SizedBox(width:10),
+                                WeatherCard(),
+                                SizedBox(width:10),
+                                WeatherCard(),
+                                SizedBox(width:10),
+                                WeatherCard(),
 
-                          ],
-                        ),
+                              ],
+                            ),
+
+                          ),
+
+                        ],
 
                       ),
-                    ],
-                  ),
+                    ),
+                    SizedBox(height:20),
+                  ],
                 ),
+
         ],
       );
 
