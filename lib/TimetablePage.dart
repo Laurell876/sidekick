@@ -6,33 +6,34 @@ import 'TopOfTimetable.dart';
 class TimetablePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return
-            Stack(
+
+
+    return Stack(
+      children: <Widget>[
+            Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                ListView(
-                  children: <Widget>[
-                    TopOfTimetable(),
-                  ],
-                ),
-
-
-
-
-                Positioned(
-                  bottom:10,
-                  right:15,
-                  child: FloatingActionButton(
-                    onPressed: null,
-                    child: Icon(Icons.add),
-                    backgroundColor: Color(0xffBC9BF4),
-                  ),
-                ),
+                TopOfTimetable(),
+                UpComingCard(),
               ],
-            );
-
-            
+            ),
 
 
 
+
+
+
+
+        Positioned(
+          bottom:10,
+          right:15,
+          child: FloatingActionButton(
+            onPressed: null,
+            child: Icon(Icons.add),
+            backgroundColor: Color(0xffBC9BF4),
+          ),
+        ),
+      ],
+    );
   }
 }

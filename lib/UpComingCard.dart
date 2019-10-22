@@ -2,11 +2,14 @@ import 'package:flutter/material.dart';
 
 
 class UpComingCard extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
+
+
     return Container(
       height:200,
-      width:300,
+      width:260,
       decoration: BoxDecoration(
         color: Color(0xfff5d2ff),
           borderRadius: BorderRadius.circular(30.0),
@@ -23,7 +26,7 @@ class UpComingCard extends StatelessWidget {
                 children: <Widget>[
                   Text('Upcoming',
                     style: TextStyle(
-                      fontSize: 23,
+                      fontSize: 21,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -45,12 +48,12 @@ class UpComingCard extends StatelessWidget {
                       children: <Widget>[
                         Text('Mathematics',
                           style: TextStyle(
-                            fontSize: 22,
+                            fontSize: 20,
                           ),
                         ),
                         Text('8:00',
                           style: TextStyle(
-                            fontSize: 22,
+                            fontSize: 18,
                           ),
                         ),
 
@@ -64,12 +67,12 @@ class UpComingCard extends StatelessWidget {
                       children: <Widget>[
                         Text('Ms. Brown',
                           style: TextStyle(
-                            fontSize: 22,
+                            fontSize: 18,
                           ),
                         ),
                         Text('4A-8',
                           style: TextStyle(
-                            fontSize: 22,
+                            fontSize: 18,
                           ),
                         ),
 
@@ -99,12 +102,12 @@ class UpComingCard extends StatelessWidget {
                       children: <Widget>[
                         Text('Mathematics',
                           style: TextStyle(
-                            fontSize: 22,
+                            fontSize: 20,
                           ),
                         ),
-                        Text('11:00',
+                        Text('8:00',
                           style: TextStyle(
-                            fontSize: 22,
+                            fontSize: 18,
                           ),
                         ),
 
@@ -118,12 +121,12 @@ class UpComingCard extends StatelessWidget {
                       children: <Widget>[
                         Text('Ms. Brown',
                           style: TextStyle(
-                            fontSize: 22,
+                            fontSize: 18,
                           ),
                         ),
                         Text('4A-8',
                           style: TextStyle(
-                            fontSize: 22,
+                            fontSize: 18,
                           ),
                         ),
 
@@ -153,12 +156,12 @@ class UpComingCard extends StatelessWidget {
                       children: <Widget>[
                         Text('Mathematics',
                           style: TextStyle(
-                            fontSize: 22,
+                            fontSize: 20,
                           ),
                         ),
-                        Text('13:00',
+                        Text('8:00',
                           style: TextStyle(
-                            fontSize: 22,
+                            fontSize: 18,
                           ),
                         ),
 
@@ -172,12 +175,12 @@ class UpComingCard extends StatelessWidget {
                       children: <Widget>[
                         Text('Ms. Brown',
                           style: TextStyle(
-                            fontSize: 22,
+                            fontSize: 18,
                           ),
                         ),
                         Text('4A-8',
                           style: TextStyle(
-                            fontSize: 22,
+                            fontSize: 18,
                           ),
                         ),
 
@@ -189,6 +192,9 @@ class UpComingCard extends StatelessWidget {
                 ),
               ),
             ),
+
+
+
           ],
         ),
       ),

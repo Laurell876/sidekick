@@ -18,7 +18,7 @@ void main()=>runApp(MaterialApp(
 
     debugShowCheckedModeBanner: false,
   routes: {
-    '/': (context)=>LoginAndSignUp(),
+    '/': (context)=>NavBarPage(),
     '/SignUp': (context)=>SignUpPage(),
     '/Login':(context)=>LoginPage(),
     '/NavBarPage':(context)=>NavBarPage(),
