@@ -56,12 +56,23 @@ class _NavBarPageState extends State<NavBarPage> {
                         width:6,
                       ),
 
-                      const Text('Sidekick',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontFamily: 'OleoScript',
-                          fontSize: 25,
-                        ),
+                      Row(
+                        children: <Widget>[
+                          const Text('Side',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontFamily: 'OleoScript',
+                              fontSize: 25,
+                            ),
+                          ),
+                          Text('kick',
+                            style: TextStyle(
+                              color: Colors.pink,
+                              fontFamily: 'OleoScript',
+                              fontSize: 25,
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),

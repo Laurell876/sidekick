@@ -9,10 +9,14 @@ class TopOfTimetable extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
 
       children: <Widget>[
-                         
-        Text('Timetable',
-          style: TextStyle(
-            fontSize: 25,
+
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text('Timetable',
+            style: TextStyle(
+              fontSize: 20,
+              fontStyle: FontStyle.italic,
+            ),
           ),
         ),
 

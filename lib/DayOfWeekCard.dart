@@ -24,7 +24,7 @@ class DayOfWeekCard extends StatelessWidget {
                       Text('Monday',
                         style: TextStyle(
                           fontFamily: 'Roboto',
-                          fontSize: 20,
+                          fontSize: 18,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -44,7 +44,8 @@ class DayOfWeekCard extends StatelessWidget {
                   children: <Widget>[
                     Text('Mathematics',
                       style: TextStyle(
-                        fontSize: 22,
+                        fontSize: 17,
+                        fontStyle: FontStyle.italic,
 
                       ),
                     ),
@@ -89,7 +90,8 @@ class DayOfWeekCard extends StatelessWidget {
                   children: <Widget>[
                     Text('Mathematics',
                       style: TextStyle(
-                        fontSize: 22,
+                        fontSize: 17,
+                        fontStyle: FontStyle.italic,
 
                       ),
                     ),
@@ -137,7 +139,8 @@ class DayOfWeekCard extends StatelessWidget {
                   children: <Widget>[
                     Text('Mathematics',
                       style: TextStyle(
-                        fontSize: 22,
+                        fontSize: 17,
+                        fontStyle: FontStyle.italic,
 
                       ),
                     ),

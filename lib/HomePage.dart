@@ -21,32 +21,38 @@ class _HomePageState extends State<HomePage> {
                     child: Column(
                       children: <Widget>[
 
-                        Text(
-                          'Profile',
-                          style: TextStyle(
-                            fontSize: 20,
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text('Profile',
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontStyle: FontStyle.italic,
+                            ),
                           ),
                         ),
 
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(200.0),
-                          child: Container(
-                            height:130,
-                            decoration: BoxDecoration(
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.black,
-                                  blurRadius:20.0,
-                                  spreadRadius:5.0,
-                                  offset: Offset(
-                                    10.0,
-                                    10.0,
+                        Padding(
+                          padding: const EdgeInsets.all(4.0),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(200.0),
+                            child: Container(
+                              height:130,
+                              decoration: BoxDecoration(
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.black,
+                                    blurRadius:20.0,
+                                    spreadRadius:5.0,
+                                    offset: Offset(
+                                      10.0,
+                                      10.0,
+                                    ),
                                   ),
-                                ),
-                              ],
-                            ),
-                            child: Image(
-                              image: AssetImage('assets/taylor.png'),
+                                ],
+                              ),
+                              child: Image(
+                                image: AssetImage('assets/taylor.png'),
+                              ),
                             ),
                           ),
                         ),

@@ -5,13 +5,25 @@ class TopOfNotes extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        NoteCard(),
-        NoteCard(),
-        NoteCard(),
-        NoteCard(),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text('Notes',
+            style: TextStyle(
+              fontSize: 20,
+              fontStyle: FontStyle.italic,
+            ),
+          ),
+        ),
+        Column(
+          children: <Widget>[
+            NoteCard(),
+            NoteCard(),
+            NoteCard(),
+            NoteCard(),
 
+          ],
+        ),
       ],
     );
   }

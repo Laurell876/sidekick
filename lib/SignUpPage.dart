@@ -7,6 +7,7 @@ class SignUpPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xfffff5f8),
       body: SafeArea(
         child: Center(
           child: Column(
@@ -171,8 +172,8 @@ class SignUpPage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(30.0),
                   child: Container(
                     width:300,
-                    height:45,
-                    color:Colors.black,
+                    height:50,
+                    color:Colors.pink,
                     child: FlatButton(
                       onPressed: null,
                       child: Text(
