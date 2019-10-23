@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 class DayOfWeekCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    double _width = MediaQuery.of(context).size.width;
+    double _height = MediaQuery.of(context).size.height;
     return Container(
-      width:250,
+      width: _width*0.7,
 
       decoration: BoxDecoration(
         color: Color(0xffBC9BF4),
@@ -24,7 +26,7 @@ class DayOfWeekCard extends StatelessWidget {
                       Text('Monday',
                         style: TextStyle(
                           fontFamily: 'Roboto',
-                          fontSize: 18,
+                          fontSize: _height/35,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -44,37 +46,38 @@ class DayOfWeekCard extends StatelessWidget {
                   children: <Widget>[
                     Text('Mathematics',
                       style: TextStyle(
-                        fontSize: 17,
+                        fontSize: _height/48,
                         fontStyle: FontStyle.italic,
 
                       ),
                     ),
                     Text('Ms. Jones',
                       style: TextStyle(
-                        fontSize: 15,
+                        fontSize: _height/48,
 
                       ),
                     ),
                     Text('4A-3',
                       style: TextStyle(
-                        fontSize: 15,
+                        fontSize: _height/48,
 
                       ),
                     ),
                     Text('Starts: 8:00',
                       style: TextStyle(
-                        fontSize: 14,
+                        fontSize: _height/49,
 
                       ),
                     ),
                     Text('Ends: 10:00',
                       style: TextStyle(
-                        fontSize: 14,
+                        fontSize: _height/49,
 
                       ),
                     ),
                   ],
                 ),
+
 
 
 
@@ -90,38 +93,37 @@ class DayOfWeekCard extends StatelessWidget {
                   children: <Widget>[
                     Text('Mathematics',
                       style: TextStyle(
-                        fontSize: 17,
+                        fontSize: _height/45,
                         fontStyle: FontStyle.italic,
 
                       ),
                     ),
                     Text('Ms. Jones',
                       style: TextStyle(
-                        fontSize: 15,
+                        fontSize: _height/48,
 
                       ),
                     ),
                     Text('4A-3',
                       style: TextStyle(
-                        fontSize: 15,
+                        fontSize: _height/48,
 
                       ),
                     ),
                     Text('Starts: 8:00',
                       style: TextStyle(
-                        fontSize: 14,
+                        fontSize: _height/49,
 
                       ),
                     ),
                     Text('Ends: 10:00',
                       style: TextStyle(
-                        fontSize: 14,
+                        fontSize: _height/49,
 
                       ),
                     ),
                   ],
                 ),
-
 
 
 
@@ -133,44 +135,42 @@ class DayOfWeekCard extends StatelessWidget {
                 ),
 
 
-
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Text('Mathematics',
                       style: TextStyle(
-                        fontSize: 17,
+                        fontSize: _height/45,
                         fontStyle: FontStyle.italic,
 
                       ),
                     ),
                     Text('Ms. Jones',
                       style: TextStyle(
-                        fontSize: 15,
+                        fontSize: _height/48,
 
                       ),
                     ),
                     Text('4A-3',
                       style: TextStyle(
-                        fontSize: 15,
+                        fontSize: _height/48,
 
                       ),
                     ),
                     Text('Starts: 8:00',
                       style: TextStyle(
-                        fontSize: 14,
+                        fontSize: _height/49,
 
                       ),
                     ),
                     Text('Ends: 10:00',
                       style: TextStyle(
-                        fontSize: 14,
+                        fontSize: _height/49,
 
                       ),
                     ),
                   ],
                 ),
-
 
 
 

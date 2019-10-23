@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:sidekick/HomePage.dart';
 import 'package:sidekick/TimetablePage.dart';
 import 'package:sidekick/NotesPage.dart';
+import 'package:flutter/services.dart';
+import 'package:sidekick/ClassesPage.dart';
 
-class NavBarPage extends StatefulWidget {
+
+class NavBarPage extends StatefulWidget{
   @override
   _NavBarPageState createState() => _NavBarPageState();
 }
@@ -12,12 +15,13 @@ class _NavBarPageState extends State<NavBarPage> {
 
 
 
+
   int _selectedIndex = 0;
   static  TextStyle optionStyle = TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static  List<Widget> _widgetOptions = <Widget>[
     HomePage(),
-
     NotesPage(),
+    ClassesPage(),
     TimetablePage(),
 
   ];
@@ -32,6 +36,22 @@ class _NavBarPageState extends State<NavBarPage> {
 
   @override
   Widget build(BuildContext context) {
+    double _width = MediaQuery.of(context).size.width;
+    double _height = MediaQuery.of(context).size.height;
+
+
+    @override
+    void initState(){
+      super.initState();
+      SystemChrome.setPreferredOrientations([
+        DeviceOrientation.landscapeRight,
+        DeviceOrientation.landscapeLeft,
+      ]);
+    }
+
+
+
+
     return Scaffold(
       backgroundColor: Color(0xfffff5f8),
       appBar: AppBar(
@@ -58,18 +78,18 @@ class _NavBarPageState extends State<NavBarPage> {
 
                       Row(
                         children: <Widget>[
-                          const Text('Side',
+                          Text('Side',
                             style: TextStyle(
                               color: Colors.black,
                               fontFamily: 'OleoScript',
-                              fontSize: 25,
+                              fontSize: 30,
                             ),
                           ),
                           Text('kick',
                             style: TextStyle(
                               color: Colors.pink,
                               fontFamily: 'OleoScript',
-                              fontSize: 25,
+                              fontSize: 30,
                             ),
                           ),
                         ],
@@ -124,6 +144,14 @@ class _NavBarPageState extends State<NavBarPage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.event),
             title: Text('Notes',
+              style: TextStyle(
+                fontSize: 15,
+              ),
+            ),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.class_),
+            title: Text('Classes',
               style: TextStyle(
                 fontSize: 15,
               ),
