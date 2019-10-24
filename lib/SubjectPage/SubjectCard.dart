@@ -10,7 +10,7 @@ class ClassCard extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20.0),
-          color: AppConfig.tertiary_color,
+          color: AppConfig.secondary_color,
         ),
         height:_height*0.2,
         width: _width/2.5,

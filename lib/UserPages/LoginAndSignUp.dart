@@ -6,7 +6,10 @@ import '../constants/AppConfig.dart';
 class LoginAndSignUp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    double _width = MediaQuery.of(context).size.width;
+    double _height = MediaQuery.of(context).size.height;
     return Scaffold(
+
 //      backgroundColor: Color(0xfff4f4f8),
       body: SafeArea(
         child: Center(
@@ -23,14 +26,14 @@ class LoginAndSignUp extends StatelessWidget {
                       'SIDE',
                       style: TextStyle(
                         fontFamily: 'OleoScript',
-                        fontSize: 50,
+                        fontSize: _width*0.13,
                       ),
                     ),
                     Text(
                       'KICK',
                       style: TextStyle(
                         fontFamily: 'OleoScript',
-                        fontSize: 50,
+                        fontSize: _width*0.13,
                         color: AppConfig.primary_color,
                       ),
                     ),
@@ -39,15 +42,16 @@ class LoginAndSignUp extends StatelessWidget {
               ),
 
              Padding(
-               padding: const EdgeInsets.fromLTRB(0, 0, 0, 50),
+               padding: EdgeInsets.fromLTRB(0, 0, 0, _width*0.1),
                child: Column(
                  children: <Widget>[
 
                    GestureDetector(
                      onTap: (){Navigator.pushNamed(context, '/SignUp');},
                      child: Container(
-                       width:300,
-                       height:50,
+                       width: _width*0.8,
+                       height: _height*0.05,
+
                        child: OutlineButton(
                          shape: RoundedRectangleBorder(
                            borderRadius: BorderRadius.circular(30.0),
@@ -58,7 +62,7 @@ class LoginAndSignUp extends StatelessWidget {
                            'SIGN UP',
                            style: TextStyle(
                              color: AppConfig.primary_color,
-                             fontSize: 20,
+                             fontSize:  _height*0.02,
                            ),
                          ),
 
@@ -78,8 +82,8 @@ class LoginAndSignUp extends StatelessWidget {
                        child: ClipRRect(
                          borderRadius: BorderRadius.circular(30.0),
                          child: Container(
-                           width:300,
-                           height:50,
+                           width: _width*0.8,
+                           height: _height*0.05,
                            color: AppConfig.primary_color,
                            child: FlatButton(
                              onPressed: null,
@@ -87,7 +91,7 @@ class LoginAndSignUp extends StatelessWidget {
                                'LOGIN',
                                style: TextStyle(
                                  color: Colors.white,
-                                 fontSize: 20,
+                                 fontSize:  _height*0.02,
                                ),
                              ),
 

@@ -7,6 +7,7 @@ class NoteCreation extends StatelessWidget {
     double _width = MediaQuery.of(context).size.width;
     double _height = MediaQuery.of(context).size.height;
     return Scaffold(
+      resizeToAvoidBottomInset : false,
       appBar: AppBar(
         iconTheme: IconThemeData(
           color: AppConfig.primary_color, //change your color here
@@ -68,97 +69,105 @@ class NoteCreation extends StatelessWidget {
 
       ),
 
-      body: ListView(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text('Add A Note',
-                  style: TextStyle(
-                    fontSize: _height/30,
-                    fontStyle: FontStyle.italic,
+          Container(
+            child:Column(
+              children: <Widget>[
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text('Add A Note',
+                        style: TextStyle(
+                          fontSize: _height/30,
+                          fontStyle: FontStyle.italic,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+
+
+                Padding(
+                  padding: EdgeInsets.all(_width*0.05),
+                  child: Container(
+
+                    decoration: BoxDecoration(
+                        color: AppConfig.tertiary_color,
+                        borderRadius: BorderRadius.circular(20)
+                    ),
+                    child: Column(
+                      children: <Widget>[
+
+
+                        Padding(
+                          padding: EdgeInsets.all(_width*0.03),
+                          child: Container(
+
+                            width: _width-10,
+                            height: _height/20,
+                            child: new TextField(
+                              decoration: new InputDecoration(
+
+                                labelStyle: TextStyle(
+                                  fontSize: _height/50,
+                                ),
+
+                                border: InputBorder.none,
+                                enabledBorder: InputBorder.none,
+                                focusedBorder: InputBorder.none,
+
+
+
+
+                                hintText: "Heading...",
+                              ),
+                            ),
+                          ),
+                        ),
+                        Divider(),
+
+
+                        Padding(
+                          padding: EdgeInsets.all(_width*0.03),
+                          child: Container(
+                            width: _width-10,
+                            height: _height/3,
+
+                            child: new TextField(
+                              keyboardType: TextInputType.multiline,
+                              maxLines: null,
+                              decoration: new InputDecoration(
+
+                                labelStyle: TextStyle(
+                                  fontSize: _height/50,
+                                ),
+
+                                border: InputBorder.none,
+                                enabledBorder: InputBorder.none,
+                                focusedBorder: InputBorder.none,
+
+
+                                hintText: "Body...",
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-              ),
-            ],
-          ),
-
-
-          Padding(
-            padding: EdgeInsets.all(_width*0.05),
-            child: Container(
-
-              decoration: BoxDecoration(
-                  color: AppConfig.tertiary_color,
-                borderRadius: BorderRadius.circular(20)
-              ),
-              child: Column(
-                children: <Widget>[
-
-
-                  Padding(
-                    padding: EdgeInsets.all(_width*0.03),
-                    child: Container(
-
-                      width: _width-10,
-                      height: _height/20,
-                      child: new TextField(
-                        decoration: new InputDecoration(
-
-                            labelStyle: TextStyle(
-                              fontSize: _height/50,
-                            ),
-
-                            border: InputBorder.none,
-                            enabledBorder: InputBorder.none,
-                            focusedBorder: InputBorder.none,
-
-
-
-
-                            hintText: "Heading...",
-                            ),
-                      ),
-                    ),
-                  ),
-                  Divider(),
-
-
-                  Padding(
-                    padding: EdgeInsets.all(_width*0.03),
-                    child: Container(
-                      width: _width-10,
-                      height: _height/3,
-
-                      child: new TextField(
-                        keyboardType: TextInputType.multiline,
-                        maxLines: null,
-                        decoration: new InputDecoration(
-
-                            labelStyle: TextStyle(
-                              fontSize: _height/50,
-                            ),
-
-                            border: InputBorder.none,
-                            enabledBorder: InputBorder.none,
-                            focusedBorder: InputBorder.none,
-
-
-                            hintText: "Body...",
-                            ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+              ],
             ),
           ),
 
 
+
           Padding(
-            padding: EdgeInsets.only(top: _height*0.1, right:10),
+            padding: EdgeInsets.only(bottom: _height*0.04),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[

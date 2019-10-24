@@ -6,6 +6,7 @@ import 'package:sidekick/NavBarPage.dart';
 import 'package:flutter/services.dart';
 import 'package:sidekick/SubjectPage/AddSubjectPage.dart';
 import 'SubjectPage/NoteCreation.dart';
+import 'SubjectPage/AddAssignmentPage.dart';
 const PrimaryColor = Colors.black;
 Future main() async{
   WidgetsFlutterBinding.ensureInitialized(); //needed to lock orientation
@@ -23,12 +24,13 @@ Future main() async{
 
       debugShowCheckedModeBanner: false,
       routes: {
-        '/': (context)=> NavBarPage(),
+        '/': (context)=> LoginAndSignUp(),
         '/SignUp': (context)=>SignUpPage(),
         '/Login':(context)=>LoginPage(),
         '/NavBarPage':(context)=>NavBarPage(),
         '/AddSub': (context)=>AddSubjectPage(),
         '/AddNote':(context)=>NoteCreation(),
+        '/AddAssignment':(context)=>AddAssignmentPage(),
       }
   ));
 

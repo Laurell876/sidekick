@@ -6,6 +6,8 @@ import '../constants/AppConfig.dart';
 class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    double _width = MediaQuery.of(context).size.width;
+    double _height = MediaQuery.of(context).size.height;
     return Scaffold(
 
       body: SafeArea(
@@ -21,14 +23,14 @@ class LoginPage extends StatelessWidget {
                     'SIDE',
                     style: TextStyle(
                       fontFamily: 'OleoScript',
-                      fontSize: 50,
+                      fontSize: _width*0.13,
                     ),
                   ),
                   Text(
                     'KICK',
                     style: TextStyle(
                       fontFamily: 'OleoScript',
-                      fontSize: 50,
+                      fontSize: _width*0.13,
                       color: AppConfig.primary_color,
                     ),
                   ),
@@ -46,7 +48,8 @@ class LoginPage extends StatelessWidget {
 
 
                     Container(
-                      width: 350,
+                      width: _width*0.9,
+                      height: _height*0.09,
                       child: new TextField(
                         decoration: new InputDecoration(
                             labelText: 'EMAIL',
@@ -67,12 +70,13 @@ class LoginPage extends StatelessWidget {
                     ),
 
                     SizedBox(
-                      height:20,
+                      height: 0.1,
                     ),
 
 
                     Container(
-                      width: 350,
+                      width: _width*0.9,
+                      height: _height*0.09,
                       child: new TextField(
                         decoration: new InputDecoration(
 
@@ -99,7 +103,7 @@ class LoginPage extends StatelessWidget {
 
 
                     SizedBox(
-                      height:20,
+                      height: 0.1,
                     ),
 
 
@@ -111,7 +115,7 @@ class LoginPage extends StatelessWidget {
                           'Don\'t Have An Account?',
                           style: TextStyle(
                             color:Colors.grey,
-                            fontSize: 15
+                            fontSize:  _height*0.02,
                           ),
                         ),
                         GestureDetector(
@@ -122,7 +126,7 @@ class LoginPage extends StatelessWidget {
                             'REGISTER',
                             style: TextStyle(
                               color: AppConfig.primary_color,
-
+                              fontSize:  _height*0.02,
                             ),
                           ),
                         ),
@@ -144,8 +148,8 @@ class LoginPage extends StatelessWidget {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(30.0),
                   child: Container(
-                    width:300,
-                    height:45,
+                    width: _width*0.8,
+                    height: _height*0.05,
                     color:AppConfig.primary_color,
                     child: FlatButton(
                       onPressed: null,
@@ -153,7 +157,7 @@ class LoginPage extends StatelessWidget {
                         'LOGIN',
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 20,
+                          fontSize:  _height*0.02,
                         ),
                       ),
 
