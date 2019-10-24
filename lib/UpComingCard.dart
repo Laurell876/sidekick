@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'constants/AppConfig.dart';
 
 class UpComingCard extends StatelessWidget {
 
@@ -14,7 +14,7 @@ class UpComingCard extends StatelessWidget {
         height: _height/3.8,
         width:_width*0.8,
         decoration: BoxDecoration(
-          color: Color(0xfff5d2ff),
+          color: AppConfig.tertiary_color,
             borderRadius: BorderRadius.circular(20.0),
         ),
         child: Padding(

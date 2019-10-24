@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'constants/AppConfig.dart';
 class ClassCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -10,7 +10,7 @@ class ClassCard extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20.0),
-          color: Color(0xffBC9BF4),
+          color: AppConfig.tertiary_color,
         ),
         height:_height*0.2,
         width: _width/2.5,

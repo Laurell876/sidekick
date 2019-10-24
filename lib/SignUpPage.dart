@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'constants/AppConfig.dart';
 
 
 
@@ -7,7 +7,7 @@ class SignUpPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xfffff5f8),
+
       body: SafeArea(
         child: Center(
           child: Column(
@@ -29,7 +29,7 @@ class SignUpPage extends StatelessWidget {
                     style: TextStyle(
                       fontFamily: 'OleoScript',
                       fontSize: 50,
-                      color:Colors.pink,
+                      color: AppConfig.primary_color,
                     ),
                   ),
                 ],
@@ -148,7 +148,7 @@ class SignUpPage extends StatelessWidget {
                           child: Text(
                             'LOGIN',
                             style: TextStyle(
-                              color: Colors.pink,
+                              color: AppConfig.primary_color,
 
                             ),
                           ),
@@ -173,7 +173,7 @@ class SignUpPage extends StatelessWidget {
                   child: Container(
                     width:300,
                     height:50,
-                    color:Colors.pink,
+                    color: AppConfig.primary_color,
                     child: FlatButton(
                       onPressed: null,
                       child: Text(

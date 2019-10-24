@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'constants/AppConfig.dart';
 
 class NoteCard extends StatelessWidget {
   @override
@@ -12,7 +12,7 @@ class NoteCard extends StatelessWidget {
         width: _width*0.9,
         height: _height/10,
         decoration: BoxDecoration(
-          color:  Color(0xfff5d2ff),
+          color:  AppConfig.tertiary_color,
           borderRadius: BorderRadius.circular(15.0),
         ),
         child: Padding(

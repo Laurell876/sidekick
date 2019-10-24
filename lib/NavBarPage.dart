@@ -4,7 +4,7 @@ import 'package:sidekick/TimetablePage.dart';
 import 'package:sidekick/NotesPage.dart';
 import 'package:flutter/services.dart';
 import 'package:sidekick/ClassesPage.dart';
-
+import 'constants/AppConfig.dart';
 
 class NavBarPage extends StatefulWidget{
   @override
@@ -53,7 +53,7 @@ class _NavBarPageState extends State<NavBarPage> {
 
 
     return Scaffold(
-      backgroundColor: Color(0xfffff5f8),
+
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: Colors.white,
@@ -69,7 +69,7 @@ class _NavBarPageState extends State<NavBarPage> {
                         child: Icon(
                           Icons.event_note,
                           size: 25.0,
-                          color: Colors.pinkAccent,
+                          color: AppConfig.primary_color,
                         ),
                       ),
                       SizedBox(
@@ -87,7 +87,7 @@ class _NavBarPageState extends State<NavBarPage> {
                           ),
                           Text('kick',
                             style: TextStyle(
-                              color: Colors.pink,
+                              color: AppConfig.primary_color,
                               fontFamily: 'OleoScript',
                               fontSize: 30,
                             ),
@@ -101,7 +101,7 @@ class _NavBarPageState extends State<NavBarPage> {
                       child: Icon(
                         Icons.more_vert,
                         size: 30.0,
-                        color: Colors.pinkAccent,
+                        color: AppConfig.primary_color,
                       )
                   ),
                 ],
@@ -169,7 +169,7 @@ class _NavBarPageState extends State<NavBarPage> {
 
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.pinkAccent,
+        selectedItemColor: AppConfig.primary_color,
         unselectedItemColor: Colors.grey,
         onTap: _onItemTapped,
       ),

@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'constants/AppConfig.dart';
+
+
 
 class DayOfWeekCard extends StatelessWidget {
   @override
@@ -9,7 +12,7 @@ class DayOfWeekCard extends StatelessWidget {
       width: _width*0.7,
 
       decoration: BoxDecoration(
-        color: Color(0xffBC9BF4),
+        color: AppConfig.secondary_color,
         borderRadius: BorderRadius.circular(20.0),
       ),
       child: ListView(

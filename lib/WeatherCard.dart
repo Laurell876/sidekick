@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'constants/AppConfig.dart';
 
 class WeatherCard extends StatelessWidget {
   @override
@@ -10,7 +10,7 @@ class WeatherCard extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: Container(
         decoration: BoxDecoration(
-            color: Color(0xfff5d2ff),
+            color: AppConfig.tertiary_color,
 //                                    border: Border.all(color: Color (0xffBC808D), width: 1,),
             borderRadius: BorderRadius.circular(20.0)
         ),

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sidekick/TopOfNotes.dart';
 import 'package:sidekick/NoteCard.dart';
+import 'constants/AppConfig.dart';
+
 
 class NotesPage extends StatelessWidget {
   @override
@@ -22,7 +24,8 @@ class NotesPage extends StatelessWidget {
               child: FloatingActionButton(
                 onPressed: null,
                 child: Icon(Icons.add),
-                backgroundColor: Color(0xffBC9BF4),
+//                foregroundColor: Colors.black,
+                backgroundColor: AppConfig.primary_color,
               ),
             ),
           ],
