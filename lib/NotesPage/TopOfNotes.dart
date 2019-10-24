@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sidekick/NoteCard.dart';
-import 'package:sidekick/AssignmentCard.dart';
+import 'NoteCard.dart';
+import 'AssignmentCard.dart';
 
 
 

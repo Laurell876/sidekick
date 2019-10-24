@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sidekick/WeatherCard.dart';
+import 'WeatherCard.dart';
 
 class BottomOfHomePage extends StatelessWidget {
   @override

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sidekick/UpComingCard.dart';
-import 'package:sidekick/DayOfWeekCard.dart';
+import 'UpComingCard.dart';
+import 'DayOfWeekCard.dart';
 
 class TopOfTimetable extends StatelessWidget {
   @override

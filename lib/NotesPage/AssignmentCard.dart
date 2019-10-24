@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'constants/AppConfig.dart';
+import '../constants/AppConfig.dart';
 
-class NoteCard extends StatelessWidget {
+class AssignmentCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double _width = MediaQuery.of(context).size.width;
@@ -12,7 +12,7 @@ class NoteCard extends StatelessWidget {
         width: _width*0.9,
         height: _height/10,
         decoration: BoxDecoration(
-          color:  AppConfig.tertiary_color,
+          color:  AppConfig.secondary_color,
           borderRadius: BorderRadius.circular(15.0),
         ),
         child: Padding(
@@ -22,28 +22,32 @@ class NoteCard extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  Text('Biology',
+                  Text('Physics',
                     style: TextStyle(
                       fontSize: _width/25,
                       fontStyle: FontStyle.italic,
 //                  fontWeight: FontWeight.bold,
                     ),
                   ),
-                  Text('Molecule Notes',
+                  Text('Ms. Jones',
                     style: TextStyle(
-                      fontSize:  _width/25,
+                      fontSize: _width/25,
                     ),
                   ),
+
                 ],
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  Text('Written: 18/11/2019',
+                  Text('Given: 17/09/2019',
                     style: TextStyle(
                       fontSize: _width/25,
-                      fontStyle: FontStyle.italic,
-//                  fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text('Due: 17/10/2019',
+                      style: TextStyle(
+                      fontSize: _width/25,
                     ),
                   ),
 

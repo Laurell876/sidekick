@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sidekick/ClassCard.dart';
-import 'constants/AppConfig.dart';
+import 'SubjectCard.dart';
+import '../constants/AppConfig.dart';
 
 
 
@@ -15,7 +15,7 @@ class ClassesPage extends StatelessWidget {
           children: <Widget>[
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text('Classes',
+              child: Text('Subjects',
                 style: TextStyle(
                   fontSize: _height/30,
                   fontStyle: FontStyle.italic,
@@ -40,7 +40,9 @@ class ClassesPage extends StatelessWidget {
           bottom:10,
           right:15,
           child: FloatingActionButton(
-            onPressed: null,
+            onPressed: (){
+              Navigator.pushNamed(context, '/AddSub');
+            },
             child: Icon(Icons.add),
             backgroundColor: AppConfig.primary_color,
           ),

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:sidekick/LoginAndSignUp.dart';
-import 'package:sidekick/LoginPage.dart';
-import 'package:sidekick/SignUpPage.dart';
+import 'package:sidekick/UserPages/LoginAndSignUp.dart';
+import 'package:sidekick/UserPages/LoginPage.dart';
+import 'package:sidekick/UserPages/SignUpPage.dart';
 import 'package:sidekick/NavBarPage.dart';
 import 'package:flutter/services.dart';
+import 'package:sidekick/SubjectPage/AddSubjectPage.dart';
 
 const PrimaryColor = Colors.black;
 Future main() async{
@@ -22,10 +23,11 @@ Future main() async{
 
       debugShowCheckedModeBanner: false,
       routes: {
-        '/': (context)=> LoginAndSignUp(),
+        '/': (context)=> NavBarPage(),
         '/SignUp': (context)=>SignUpPage(),
         '/Login':(context)=>LoginPage(),
         '/NavBarPage':(context)=>NavBarPage(),
+        '/AddSub': (context)=>AddSubjectPage(),
       }
   ));
 

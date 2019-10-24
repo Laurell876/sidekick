@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'constants/AppConfig.dart';
+import '../constants/AppConfig.dart';
 
-class AssignmentCard extends StatelessWidget {
+class NoteCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double _width = MediaQuery.of(context).size.width;
@@ -12,7 +12,7 @@ class AssignmentCard extends StatelessWidget {
         width: _width*0.9,
         height: _height/10,
         decoration: BoxDecoration(
-          color:  AppConfig.secondary_color,
+          color:  AppConfig.tertiary_color,
           borderRadius: BorderRadius.circular(15.0),
         ),
         child: Padding(
@@ -22,32 +22,28 @@ class AssignmentCard extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  Text('Physics',
+                  Text('Biology',
                     style: TextStyle(
                       fontSize: _width/25,
                       fontStyle: FontStyle.italic,
 //                  fontWeight: FontWeight.bold,
                     ),
                   ),
-                  Text('Ms. Jones',
+                  Text('Molecule Notes',
                     style: TextStyle(
-                      fontSize: _width/25,
+                      fontSize:  _width/25,
                     ),
                   ),
-
                 ],
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
-                  Text('Given: 17/09/2019',
+                  Text('Written: 18/11/2019',
                     style: TextStyle(
                       fontSize: _width/25,
-                    ),
-                  ),
-                  Text('Due: 17/10/2019',
-                      style: TextStyle(
-                      fontSize: _width/25,
+                      fontStyle: FontStyle.italic,
+//                  fontWeight: FontWeight.bold,
                     ),
                   ),
 

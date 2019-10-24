@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:sidekick/HomePage.dart';
-import 'package:sidekick/TimetablePage.dart';
-import 'package:sidekick/NotesPage.dart';
+import 'package:sidekick/HomePage/HomePage.dart';
+import 'package:sidekick/TimetablePage/TimetablePage.dart';
+import 'package:sidekick/NotesPage/NotesPage.dart';
 import 'package:flutter/services.dart';
-import 'package:sidekick/ClassesPage.dart';
+import 'package:sidekick/SubjectPage/SubjectPAge.dart';
 import 'constants/AppConfig.dart';
 
 class NavBarPage extends StatefulWidget{

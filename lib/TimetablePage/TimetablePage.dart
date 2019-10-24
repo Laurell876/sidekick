@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sidekick/DayOfWeekCard.dart';
-import 'package:sidekick/UpComingCard.dart';
+import 'DayOfWeekCard.dart';
+import 'UpComingCard.dart';
 import 'TopOfTimetable.dart';
-import 'constants/AppConfig.dart';
+import '../constants/AppConfig.dart';
 class TimetablePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

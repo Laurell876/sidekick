@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'constants/AppConfig.dart';
+import '../constants/AppConfig.dart';
 
 
 

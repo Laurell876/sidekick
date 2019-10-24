@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'constants/AppConfig.dart';
+import '../constants/AppConfig.dart';
 class ClassCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

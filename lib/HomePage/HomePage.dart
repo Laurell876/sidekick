@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:sidekick/TopOfHomePage.dart';
-import 'package:sidekick/WeatherCard.dart';
-import 'package:sidekick/BottomOfHomePage.dart';
+import 'TopOfHomePage.dart';
+import 'WeatherCard.dart';
+import 'BottomOfHomePage.dart';
 
 
 class HomePage extends StatefulWidget {

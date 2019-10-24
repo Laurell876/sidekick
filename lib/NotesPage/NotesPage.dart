@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sidekick/TopOfNotes.dart';
-import 'package:sidekick/NoteCard.dart';
-import 'constants/AppConfig.dart';
+import 'TopOfNotes.dart';
+import '../constants/AppConfig.dart';
 
 
 class NotesPage extends StatelessWidget {
