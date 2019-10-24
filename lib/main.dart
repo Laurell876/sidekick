@@ -5,7 +5,7 @@ import 'package:sidekick/UserPages/SignUpPage.dart';
 import 'package:sidekick/NavBarPage.dart';
 import 'package:flutter/services.dart';
 import 'package:sidekick/SubjectPage/AddSubjectPage.dart';
-
+import 'SubjectPage/NoteCreation.dart';
 const PrimaryColor = Colors.black;
 Future main() async{
   WidgetsFlutterBinding.ensureInitialized(); //needed to lock orientation
@@ -28,6 +28,7 @@ Future main() async{
         '/Login':(context)=>LoginPage(),
         '/NavBarPage':(context)=>NavBarPage(),
         '/AddSub': (context)=>AddSubjectPage(),
+        '/AddNote':(context)=>NoteCreation(),
       }
   ));
 

@@ -17,9 +17,12 @@ class SubjectNotesCard extends StatelessWidget {
         children: <Widget>[
           Column(
             children: <Widget>[
-              Text('Notes',
-                style: TextStyle(
-                  fontSize: _height*0.03,
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text('Notes',
+                  style: TextStyle(
+                    fontSize: _height*0.03,
+                  ),
                 ),
               ),
               Divider(),

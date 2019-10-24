@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:sidekick/constants/AppConfig.dart';
 import 'SubjectNotesCard.dart';
 import 'SubjectClassesCard.dart';
+import 'SubjectAssignmentCard.dart';
+import 'NoteCreation.dart';
 
 class AddSubjectPage extends StatelessWidget {
   @override
@@ -72,15 +74,20 @@ class AddSubjectPage extends StatelessWidget {
 
 
 
-      body: Column(
+      body: ListView(
         children: <Widget>[
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text('Add A Subject',
-              style: TextStyle(
-                fontSize: _height/30,
-                fontStyle: FontStyle.italic,
-              ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Text('Add A Subject',
+                  style: TextStyle(
+                    fontSize: _height/30,
+                    fontStyle: FontStyle.italic,
+                  ),
+                ),
+              ],
             ),
           ),
 
@@ -127,58 +134,63 @@ class AddSubjectPage extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: <Widget>[
 
-                  GestureDetector(
-                    onTap: null,
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(10.0),
-                      child: Container(
-                        width:_width * 0.4,
-                        height:_height*0.05,
-                        color:AppConfig.primary_color,
-                        child: FlatButton(
-                          onPressed: null,
-                          child: Text(
-                            'Add A Note',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: _width * 0.04,
+                    GestureDetector(
+                      onTap: null,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(10.0),
+                        child: Container(
+                          width:_width * 0.4,
+                          height:_height*0.05,
+                          color:AppConfig.primary_color,
+                          child: FlatButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/AddNote');
+                            },
+                            child: Text(
+                              'Add A Note',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: _width * 0.04,
+                              ),
                             ),
-                          ),
 
+                          ),
                         ),
                       ),
                     ),
-                  ),
 
-                  GestureDetector(
-                    onTap: null,
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(10.0),
-                      child: Container(
-                        width:_width * 0.4,
-                        height:_height*0.05,
-                        color:AppConfig.primary_color,
-                        child: FlatButton(
-                          onPressed: null,
-                          child: Text(
-                            'Add Assignment',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: _width * 0.04,
+                    GestureDetector(
+                      onTap: null,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(10.0),
+                        child: Container(
+                          width:_width * 0.4,
+                          height:_height*0.05,
+                          color:AppConfig.primary_color,
+                          child: FlatButton(
+                            onPressed: null,
+                            child: Text(
+                              'Add Assignment',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: _width * 0.04,
+                              ),
                             ),
-                          ),
 
+                          ),
                         ),
                       ),
                     ),
-                  ),
 
 
-                ],
+                  ],
+                ),
               ),
 
 
@@ -230,10 +242,9 @@ class AddSubjectPage extends StatelessWidget {
                       children: <Widget>[
                         SubjectClassesCard(),
                         SizedBox(width:20),
-                        SubjectNotesCard(),
+                        SubjectAssignmentCard(),
                         SizedBox(width:20,),
-
-
+                        SubjectNotesCard(),
 
 
 
@@ -242,6 +253,37 @@ class AddSubjectPage extends StatelessWidget {
                   ),
                 ],
               ),
+            ),
+          ),
+
+          Padding(
+            padding: EdgeInsets.only(top: _height*0.1, right:10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                GestureDetector(
+                  onTap: null,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20.0),
+                    child: Container(
+                      width:_width * 0.4,
+                      height:_height*0.07,
+                      color:AppConfig.primary_color,
+                      child: FlatButton(
+                        onPressed: null,
+                        child: Text(
+                          'Confirm',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: _width * 0.06,
+                          ),
+                        ),
+
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
         ],
