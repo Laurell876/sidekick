@@ -170,7 +170,14 @@ class _LoginPageState extends State<LoginPage> {
                         setState(() {
                           _progressBarState = true;
                         });
-                        _makePostRequest();
+                        _makePostRequest()
+                        .then((result) {
+                          setState(() {
+                            if (_progressBarState) {
+                              _progressBarState = false;
+                            }
+                          });
+                        });
                       },
                       child: _progressBarState
                           ? const CircularProgressIndicator():
@@ -204,22 +211,6 @@ class _LoginPageState extends State<LoginPage> {
 
   Future  _makePostRequest() async {
     print("hello");
-//    String url = 'http://10.0.2.2:3001/user/login';
-//
-//    Map<String, dynamic> requestBody = {
-//      "email": "test@gmail.com",
-//      "password":"test"
-//    };
-//
-//    Map<String, String> headers = {"Content-Type":"application/json"};
-//
-//    final response = await http
-//      .post(url, headers: headers, body: jsonEncode(requestBody))
-//      .timeout(Duration(seconds: 20));
-//
-//    final responseBody = json.decode(response.body);
-//
-//    print(responseBody);
 
 
     Map<String, dynamic> requestBody = {
@@ -252,12 +243,7 @@ class _LoginPageState extends State<LoginPage> {
       });
     }
 
-
-
-
-
-
-
+    
   }
 
 
