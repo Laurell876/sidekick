@@ -21,7 +21,7 @@ class SubjectNotesCard extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: Text('Notes',
                   style: TextStyle(
-                    fontSize: _height*0.03,
+                    fontSize: _width*0.04,
                   ),
                 ),
               ),
@@ -33,12 +33,12 @@ class SubjectNotesCard extends StatelessWidget {
                   children: <Widget>[
                     Text('Heading',
                       style: TextStyle(
-                        fontSize: _height*0.025,
+                        fontSize: _width*0.04,
                       ),
                     ),
                     Text('1/1/2019',
                       style: TextStyle(
-                        fontSize: _height*0.025,
+                        fontSize: _width*0.04,
                       ),
                     ),
                   ],
@@ -54,34 +54,12 @@ class SubjectNotesCard extends StatelessWidget {
                   children: <Widget>[
                     Text('Heading',
                       style: TextStyle(
-                        fontSize: _height*0.025,
+                        fontSize: _width*0.04,
                       ),
                     ),
                     Text('1/1/2019',
                       style: TextStyle(
-                        fontSize: _height*0.025,
-                      ),
-                    ),
-                  ],
-                ),
-
-              ),
-              Divider(),
-
-
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    Text('Heading',
-                      style: TextStyle(
-                        fontSize: _height*0.025,
-                      ),
-                    ),
-                    Text('1/1/2019',
-                      style: TextStyle(
-                        fontSize: _height*0.025,
+                        fontSize: _width*0.04,
                       ),
                     ),
                   ],
@@ -98,12 +76,34 @@ class SubjectNotesCard extends StatelessWidget {
                   children: <Widget>[
                     Text('Heading',
                       style: TextStyle(
-                        fontSize: _height*0.025,
+                        fontSize: _width*0.04,
                       ),
                     ),
                     Text('1/1/2019',
                       style: TextStyle(
-                        fontSize: _height*0.025,
+                        fontSize: _width*0.04,
+                      ),
+                    ),
+                  ],
+                ),
+
+              ),
+              Divider(),
+
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Text('Heading',
+                      style: TextStyle(
+                        fontSize: _width*0.04,
+                      ),
+                    ),
+                    Text('1/1/2019',
+                      style: TextStyle(
+                        fontSize:_width*0.04,
                       ),
                     ),
                   ],

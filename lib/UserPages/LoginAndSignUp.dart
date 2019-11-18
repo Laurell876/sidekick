@@ -4,6 +4,7 @@ import '../constants/AppConfig.dart';
 
 
 class LoginAndSignUp extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     double _width = MediaQuery.of(context).size.width;
@@ -87,7 +88,8 @@ class LoginAndSignUp extends StatelessWidget {
                            color: AppConfig.primary_color,
                            child: FlatButton(
                              onPressed: null,
-                             child: Text(
+                             child:
+                             Text(
                                'LOGIN',
                                style: TextStyle(
                                  color: Colors.white,

@@ -21,7 +21,7 @@ class SubjectAssignmentCard extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: Text('Assignment',
                   style: TextStyle(
-                    fontSize: _height*0.03,
+                    fontSize: _width*0.06,
                   ),
                 ),
               ),
@@ -35,12 +35,12 @@ class SubjectAssignmentCard extends StatelessWidget {
                       children: <Widget>[
                         Text('Biology',
                           style: TextStyle(
-                            fontSize: _height*0.02,
+                            fontSize: _width*0.04,
                           ),
                         ),
                         Text('Enzymes Research',
                           style: TextStyle(
-                            fontSize: _height*0.02,
+                            fontSize: _width*0.04,
                           ),
                         ),
                       ],
@@ -52,12 +52,12 @@ class SubjectAssignmentCard extends StatelessWidget {
                       children: <Widget>[
                         Text('Given: 1/1/2019',
                           style: TextStyle(
-                            fontSize: _height*0.02,
+                            fontSize: _width*0.04,
                           ),
                         ),
                         Text('Due: 2/2/2019',
                           style: TextStyle(
-                            fontSize: _height*0.02,
+                            fontSize: _width*0.04,
                           ),
                         ),
                       ],
@@ -79,12 +79,12 @@ class SubjectAssignmentCard extends StatelessWidget {
                       children: <Widget>[
                         Text('Biology',
                           style: TextStyle(
-                            fontSize: _height*0.02,
+                            fontSize:_width*0.04,
                           ),
                         ),
                         Text('Enzymes Research',
                           style: TextStyle(
-                            fontSize: _height*0.02,
+                            fontSize: _width*0.04,
                           ),
                         ),
                       ],
@@ -96,57 +96,12 @@ class SubjectAssignmentCard extends StatelessWidget {
                       children: <Widget>[
                         Text('Given: 1/1/2019',
                           style: TextStyle(
-                            fontSize: _height*0.02,
+                            fontSize: _width*0.04,
                           ),
                         ),
                         Text('Due: 2/2/2019',
                           style: TextStyle(
-                            fontSize: _height*0.02,
-                          ),
-                        ),
-                      ],
-                    ),
-
-
-                  ],
-                ),
-
-              ),
-              Divider(),
-
-
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  children: <Widget>[
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        Text('Biology',
-                          style: TextStyle(
-                            fontSize: _height*0.02,
-                          ),
-                        ),
-                        Text('Enzymes Research',
-                          style: TextStyle(
-                            fontSize: _height*0.02,
-                          ),
-                        ),
-                      ],
-                    ),
-
-
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        Text('Given: 1/1/2019',
-                          style: TextStyle(
-                            fontSize: _height*0.02,
-                          ),
-                        ),
-                        Text('Due: 2/2/2019',
-                          style: TextStyle(
-                            fontSize: _height*0.02,
+                            fontSize: _width*0.04,
                           ),
                         ),
                       ],
@@ -169,12 +124,12 @@ class SubjectAssignmentCard extends StatelessWidget {
                       children: <Widget>[
                         Text('Biology',
                           style: TextStyle(
-                            fontSize: _height*0.02,
+                            fontSize: _width*0.04,
                           ),
                         ),
                         Text('Enzymes Research',
                           style: TextStyle(
-                            fontSize: _height*0.02,
+                            fontSize: _width*0.04,
                           ),
                         ),
                       ],
@@ -186,12 +141,57 @@ class SubjectAssignmentCard extends StatelessWidget {
                       children: <Widget>[
                         Text('Given: 1/1/2019',
                           style: TextStyle(
-                            fontSize: _height*0.02,
+                            fontSize: _width*0.04,
                           ),
                         ),
                         Text('Due: 2/2/2019',
                           style: TextStyle(
-                            fontSize: _height*0.02,
+                            fontSize: _width*0.04,
+                          ),
+                        ),
+                      ],
+                    ),
+
+
+                  ],
+                ),
+
+              ),
+              Divider(),
+
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  children: <Widget>[
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Text('Biology',
+                          style: TextStyle(
+                            fontSize: _width*0.04,
+                          ),
+                        ),
+                        Text('Enzymes Research',
+                          style: TextStyle(
+                            fontSize: _width*0.04,
+                          ),
+                        ),
+                      ],
+                    ),
+
+
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Text('Given: 1/1/2019',
+                          style: TextStyle(
+                            fontSize: _width*0.04,
+                          ),
+                        ),
+                        Text('Due: 2/2/2019',
+                          style: TextStyle(
+                            fontSize: _width*0.04,
                           ),
                         ),
                       ],

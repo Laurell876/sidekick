@@ -21,7 +21,7 @@ class SubjectClassesCard extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: Text('Classes',
                   style: TextStyle(
-                    fontSize: _height*0.03,
+                    fontSize: _width*0.06,
                   ),
                 ),
               ),
@@ -35,12 +35,12 @@ class SubjectClassesCard extends StatelessWidget {
                       children: <Widget>[
                         Text('Tutorial',
                           style: TextStyle(
-                            fontSize: _height*0.02,
+                            fontSize: _width*0.04,
                           ),
                         ),
                         Text('Wednesday',
                           style: TextStyle(
-                            fontSize: _height*0.02,
+                            fontSize: _width*0.04,
                           ),
                         ),
                       ],
@@ -52,12 +52,12 @@ class SubjectClassesCard extends StatelessWidget {
                       children: <Widget>[
                         Text('4A-3',
                           style: TextStyle(
-                            fontSize: _height*0.02,
+                            fontSize: _width*0.04,
                           ),
                         ),
                         Text('Ms. Jones',
                           style: TextStyle(
-                            fontSize: _height*0.02,
+                            fontSize: _width*0.04,
                           ),
                         ),
                       ],
@@ -68,12 +68,12 @@ class SubjectClassesCard extends StatelessWidget {
                       children: <Widget>[
                         Text('Start: 2:00',
                           style: TextStyle(
-                            fontSize: _height*0.02,
+                            fontSize: _width*0.04,
                           ),
                         ),
                         Text('End: 4:00',
                           style: TextStyle(
-                            fontSize: _height*0.02,
+                            fontSize: _width*0.04,
                           ),
                         ),
                       ],
@@ -93,12 +93,12 @@ class SubjectClassesCard extends StatelessWidget {
                       children: <Widget>[
                         Text('Tutorial',
                           style: TextStyle(
-                            fontSize: _height*0.02,
+                            fontSize: _width*0.04,
                           ),
                         ),
                         Text('Wednesday ',
                           style: TextStyle(
-                            fontSize: _height*0.02,
+                            fontSize: _width*0.04,
                           ),
                         ),
                       ],
@@ -110,12 +110,12 @@ class SubjectClassesCard extends StatelessWidget {
                       children: <Widget>[
                         Text('4A-3',
                           style: TextStyle(
-                            fontSize: _height*0.02,
+                            fontSize: _width*0.04,
                           ),
                         ),
                         Text('Ms. Jones',
                           style: TextStyle(
-                            fontSize: _height*0.02,
+                            fontSize: _width*0.04,
                           ),
                         ),
                       ],
@@ -126,71 +126,12 @@ class SubjectClassesCard extends StatelessWidget {
                       children: <Widget>[
                         Text('Start: 2:00',
                           style: TextStyle(
-                            fontSize: _height*0.02,
+                            fontSize: _width*0.04,
                           ),
                         ),
                         Text('End: 4:00',
                           style: TextStyle(
-                            fontSize: _height*0.02,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-
-              ),
-              Divider(),
-
-
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  children: <Widget>[
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        Text('Tutorial',
-                          style: TextStyle(
-                            fontSize: _height*0.02,
-                          ),
-                        ),
-                        Text('Wednesday ',
-                          style: TextStyle(
-                            fontSize: _height*0.02,
-                          ),
-                        ),
-                      ],
-                    ),
-
-
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        Text('4A-3',
-                          style: TextStyle(
-                            fontSize: _height*0.02,
-                          ),
-                        ),
-                        Text('Ms. Jones',
-                          style: TextStyle(
-                            fontSize: _height*0.02,
-                          ),
-                        ),
-                      ],
-                    ),
-
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        Text('Start: 2:00',
-                          style: TextStyle(
-                            fontSize: _height*0.02,
-                          ),
-                        ),
-                        Text('End: 4:00',
-                          style: TextStyle(
-                            fontSize: _height*0.02,
+                            fontSize: _width*0.04,
                           ),
                         ),
                       ],
@@ -211,12 +152,12 @@ class SubjectClassesCard extends StatelessWidget {
                       children: <Widget>[
                         Text('Tutorial',
                           style: TextStyle(
-                            fontSize: _height*0.02,
+                            fontSize: _width*0.04,
                           ),
                         ),
                         Text('Wednesday ',
                           style: TextStyle(
-                            fontSize: _height*0.02,
+                            fontSize: _width*0.04,
                           ),
                         ),
                       ],
@@ -228,12 +169,12 @@ class SubjectClassesCard extends StatelessWidget {
                       children: <Widget>[
                         Text('4A-3',
                           style: TextStyle(
-                            fontSize: _height*0.02,
+                            fontSize: _width*0.04,
                           ),
                         ),
                         Text('Ms. Jones',
                           style: TextStyle(
-                            fontSize: _height*0.02,
+                            fontSize: _width*0.04,
                           ),
                         ),
                       ],
@@ -244,12 +185,71 @@ class SubjectClassesCard extends StatelessWidget {
                       children: <Widget>[
                         Text('Start: 2:00',
                           style: TextStyle(
-                            fontSize: _height*0.02,
+                            fontSize: _width*0.04,
                           ),
                         ),
                         Text('End: 4:00',
                           style: TextStyle(
-                            fontSize: _height*0.02,
+                            fontSize: _width*0.04,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+
+              ),
+              Divider(),
+
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  children: <Widget>[
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Text('Tutorial',
+                          style: TextStyle(
+                            fontSize: _width*0.04,
+                          ),
+                        ),
+                        Text('Wednesday ',
+                          style: TextStyle(
+                            fontSize: _width*0.04,
+                          ),
+                        ),
+                      ],
+                    ),
+
+
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Text('4A-3',
+                          style: TextStyle(
+                            fontSize: _width*0.04,
+                          ),
+                        ),
+                        Text('Ms. Jones',
+                          style: TextStyle(
+                            fontSize: _width*0.04,
+                          ),
+                        ),
+                      ],
+                    ),
+
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Text('Start: 2:00',
+                          style: TextStyle(
+                            fontSize: _width*0.04,
+                          ),
+                        ),
+                        Text('End: 4:00',
+                          style: TextStyle(
+                            fontSize: _width*0.04,
                           ),
                         ),
                       ],

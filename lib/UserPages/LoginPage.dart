@@ -1,9 +1,23 @@
 import 'package:flutter/material.dart';
 import '../constants/AppConfig.dart';
+import 'package:http/http.dart' as http;
+import 'dart:async';
+import 'dart:convert';
+import "../models/LoginModel.dart";
 
 
+class LoginPage extends StatefulWidget {
+  @override
+  _LoginPageState createState() => _LoginPageState();
+}
 
-class LoginPage extends StatelessWidget {
+class _LoginPageState extends State<LoginPage> {
+  bool _progressBarState = false;
+  //controllers to get data to send to post request
+
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     double _width = MediaQuery.of(context).size.width;
@@ -50,7 +64,8 @@ class LoginPage extends StatelessWidget {
                     Container(
                       width: _width*0.9,
                       height: _height*0.09,
-                      child: new TextField(
+                      child: new TextFormField(
+                        controller: _emailController,
                         decoration: new InputDecoration(
                             labelText: 'EMAIL',
                             focusedBorder: OutlineInputBorder(
@@ -77,7 +92,8 @@ class LoginPage extends StatelessWidget {
                     Container(
                       width: _width*0.9,
                       height: _height*0.09,
-                      child: new TextField(
+                      child: new TextFormField(
+                        controller: _passwordController,
                         decoration: new InputDecoration(
 
                             labelText: 'PASSWORD',
@@ -142,9 +158,7 @@ class LoginPage extends StatelessWidget {
 
 
               GestureDetector(
-                onTap: (){
-                  Navigator.pushNamed(context, '/NavBarPage');
-                },
+                onTap: () {Navigator.pushNamed(context, '/NavBarPage');},
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(30.0),
                   child: Container(
@@ -152,8 +166,16 @@ class LoginPage extends StatelessWidget {
                     height: _height*0.05,
                     color:AppConfig.primary_color,
                     child: FlatButton(
-                      onPressed: null,
-                      child: Text(
+                      onPressed: () {
+                        setState(() {
+                          _progressBarState = true;
+                        });
+                        _makePostRequest();
+                      },
+                      child: _progressBarState
+                          ? const CircularProgressIndicator():
+
+                      Text(
                         'LOGIN',
                         style: TextStyle(
                           color: Colors.white,
@@ -178,4 +200,65 @@ class LoginPage extends StatelessWidget {
       ),
     );
   }
+
+
+  Future  _makePostRequest() async {
+    print("hello");
+//    String url = 'http://10.0.2.2:3001/user/login';
+//
+//    Map<String, dynamic> requestBody = {
+//      "email": "test@gmail.com",
+//      "password":"test"
+//    };
+//
+//    Map<String, String> headers = {"Content-Type":"application/json"};
+//
+//    final response = await http
+//      .post(url, headers: headers, body: jsonEncode(requestBody))
+//      .timeout(Duration(seconds: 20));
+//
+//    final responseBody = json.decode(response.body);
+//
+//    print(responseBody);
+
+
+    Map<String, dynamic> requestBody = {
+      "email": _emailController.text,
+      "password": _passwordController.text
+    };
+
+    var client = http.Client();
+    String url = 'http://localhost:3001/user/login'; //localhost has to be replaced with 10.0.2.2
+
+    var response = await client
+        .post(
+      Uri.encodeFull(url),
+      body:jsonEncode(requestBody),
+      headers: {
+        'Content-Type': 'application/json',
+      }
+
+    ).whenComplete(client.close);
+
+
+
+    var responseBody = json.decode(response.body); //creates a map
+    var message = LoginModel.fromJson(responseBody).message;
+    print(message);
+
+    if(message == "Auth successful") {
+      await new Future.delayed(new Duration(milliseconds:1500), () {
+        Navigator.pushNamed(context, '/NavBarPage');
+      });
+    }
+
+
+
+
+
+
+
+  }
+
+
 }
