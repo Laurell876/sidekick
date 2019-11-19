@@ -5,6 +5,12 @@ import 'dart:async';
 import 'dart:convert';
 import "../models/LoginModel.dart";
 
+import 'package:rflutter_alert/rflutter_alert.dart';
+
+//the 100 is just a placeholder value as soon as the widget is built this value is replaced
+double w = 100;
+double h = 100;
+
 
 class LoginPage extends StatefulWidget {
   @override
@@ -20,8 +26,15 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
+
     double _width = MediaQuery.of(context).size.width;
     double _height = MediaQuery.of(context).size.height;
+
+
+    //alows me to use height and width og context outside of build method
+    w = _width;
+    h = _height;
+
     return Scaffold(
 
       body: SafeArea(
@@ -179,6 +192,8 @@ class _LoginPageState extends State<LoginPage> {
                           });
                         });
                       },
+
+
                       child: _progressBarState
                           ? const CircularProgressIndicator():
 
@@ -207,6 +222,38 @@ class _LoginPageState extends State<LoginPage> {
       ),
     );
   }
+
+  //style for alert boxes
+  var alertStyle = AlertStyle(
+    animationType: AnimationType.grow,
+    isCloseButton: false,
+    isOverlayTapDismiss: false,
+
+
+    descStyle: TextStyle(
+      fontWeight: FontWeight.bold,
+      //fontSize:  w*0.04,
+      fontSize: w*0.20,
+      color: Colors.grey,
+    ),
+
+
+    animationDuration: Duration(milliseconds: 350),
+
+
+    alertBorder: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(10.0),
+      side: BorderSide(
+
+      ),
+    ),
+
+
+    titleStyle: TextStyle(
+      color: AppConfig.primary_color,
+    ),
+  );
+
 
 
   Future  _makePostRequest() async {
@@ -238,8 +285,75 @@ class _LoginPageState extends State<LoginPage> {
     print(message);
 
     if(message == "Auth successful") {
-      await new Future.delayed(new Duration(milliseconds:1500), () {
-        Navigator.pushNamed(context, '/NavBarPage');
+      await new Future.delayed(new Duration(milliseconds:1000), () {
+        Alert(
+          context: context,
+          style: alertStyle,
+          type: AlertType.success,
+          title: "Login Success",
+          //desc: "Click ok to login",
+          buttons: [
+
+        DialogButton(
+          radius: BorderRadius.all(Radius.circular(10.0)),
+          child: Text(
+          "Cancel",
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: w*0.04,
+            ),
+          ),
+          color: Colors.grey,
+            onPressed: () => Navigator.pop(context),
+          width: w*0.6,
+        ),
+
+        DialogButton(
+          radius: BorderRadius.all(Radius.circular(10.0)),
+          child: Text(
+            "Ok",
+            style: TextStyle(
+                color: Colors.white,
+                fontSize: w*0.04,
+            ),
+          ),
+          color: AppConfig.primary_color,
+          onPressed: () {
+            Navigator.pushNamed(context, '/NavBarPage');
+          },
+          width: w*0.6,
+        )
+
+
+
+          ],
+        ).show();
+//        Navigator.pushNamed(context, '/NavBarPage');
+      });
+    } else {
+      await new Future.delayed(new Duration(milliseconds:1000), () {
+        Alert(
+          context: context,
+          style: alertStyle,
+          type: AlertType.error,
+          title: "Login failure",
+          desc: "Please enter a valid username and password",
+          buttons: [
+            DialogButton(
+              radius: BorderRadius.all(Radius.circular(10.0)),
+              child: Text(
+                "Ok",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: w*0.04,
+                ),
+              ),
+              color: AppConfig.primary_color,
+              onPressed: () => Navigator.pop(context),
+              width: w*0.6,
+            )
+          ],
+        ).show();
       });
     }
 

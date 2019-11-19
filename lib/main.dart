@@ -9,6 +9,7 @@ import 'SubjectPage/NoteCreation.dart';
 import 'SubjectPage/AddAssignmentPage.dart';
 const PrimaryColor = Colors.black;
 Future main() async{
+  //sv.init();
   WidgetsFlutterBinding.ensureInitialized(); //needed to lock orientation
   await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]); //locks orientation
 
