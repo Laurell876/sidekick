@@ -34,39 +34,46 @@ class _SignUpPageState extends State<SignUpPage> {
     h = _height;
     return Scaffold(
 
-      body: SafeArea(
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Text(
-                    'SIDE',
-                    style: TextStyle(
-                      fontFamily: 'OleoScript',
-                      fontSize: 50,
-                    ),
-                  ),
-                  Text(
-                    'KICK',
-                    style: TextStyle(
-                      fontFamily: 'OleoScript',
-                      fontSize: 50,
-                      color: AppConfig.primary_color,
-                    ),
-                  ),
-                ],
-              ),
-
-
-              Container(
-
-
-                child: Column(
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage('assets/crayons.jpg'),
+              fit: BoxFit.cover
+          ),
+        ),
+        child: SafeArea(
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
+                    Text(
+                      'SIDE',
+                      style: TextStyle(
+                        fontFamily: 'OleoScript',
+                        fontSize: 50,
+                      ),
+                    ),
+                    Text(
+                      'KICK',
+                      style: TextStyle(
+                        fontFamily: 'OleoScript',
+                        fontSize: 50,
+                        color: AppConfig.primary_color,
+                      ),
+                    ),
+                  ],
+                ),
+
+
+                Container(
+
+
+                  child: Column(
+                    children: <Widget>[
 
 
 
@@ -99,138 +106,138 @@ class _SignUpPageState extends State<SignUpPage> {
 
 
 
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        width: _width*0.9,
-                        height: _height*0.09,
-                        child: new TextField(
-                          controller: _emailController,
-                          decoration: new InputDecoration(
-                              labelText: 'EMAIL',
-                              focusedBorder: OutlineInputBorder(
-                                borderSide: const BorderSide(color: Colors.black, width: 2.0),
-                                borderRadius: BorderRadius.circular(30.0),
-                              ),
-                              border: new OutlineInputBorder(
-                                borderRadius: const BorderRadius.all(
-                                  const Radius.circular(30.0),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          width: _width*0.9,
+                          height: _height*0.09,
+                          child: new TextField(
+                            controller: _emailController,
+                            decoration: new InputDecoration(
+                                labelText: 'EMAIL',
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide: const BorderSide(color: Colors.black, width: 2.0),
+                                  borderRadius: BorderRadius.circular(30.0),
                                 ),
-                              ),
-                              filled: true,
-                              hintStyle: new TextStyle(color: Colors.grey[800]),
-                              hintText: "Type in your text",
-                              fillColor: Colors.white70),
-                        ),
-                      ),
-                    ),
-
-
-
-
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        width: _width*0.9,
-                        height: _height*0.09,
-                        child: new TextField(
-                          controller: _passwordController,
-                          decoration: new InputDecoration(
-
-                              labelText: 'PASSWORD',
-
-
-                              focusedBorder: OutlineInputBorder(
-                                borderSide: const BorderSide(color: Colors.black, width: 2.0),
-                                borderRadius: BorderRadius.circular(30.0),
-                              ),
-
-                              border: new OutlineInputBorder(
-
-                                borderRadius: const BorderRadius.all(
-                                  const Radius.circular(30.0),
+                                border: new OutlineInputBorder(
+                                  borderRadius: const BorderRadius.all(
+                                    const Radius.circular(30.0),
+                                  ),
                                 ),
-                              ),
-                              filled: true,
-                              hintStyle: new TextStyle(color: Colors.grey[800]),
-                              hintText: "Type in your text",
-                              fillColor: Colors.white70),
-                        ),
-                      ),
-                    ),
-
-
-
-
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Text(
-                          'Already have an Account?',
-                          style: TextStyle(
-                              color:Colors.grey,
-                            fontSize:  _height*0.02,
+                                filled: true,
+                                hintStyle: new TextStyle(color: Colors.grey[800]),
+                                hintText: "Type in your text",
+                                fillColor: Colors.white70),
                           ),
                         ),
-                        GestureDetector(
-                          onTap: (){
-                            Navigator.pushNamed(context, '/Login');
-                          },
+                      ),
 
-                          child: Text(
-                            'LOGIN',
+
+
+
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          width: _width*0.9,
+                          height: _height*0.09,
+                          child: new TextField(
+                            controller: _passwordController,
+                            decoration: new InputDecoration(
+
+                                labelText: 'PASSWORD',
+
+
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide: const BorderSide(color: Colors.black, width: 2.0),
+                                  borderRadius: BorderRadius.circular(30.0),
+                                ),
+
+                                border: new OutlineInputBorder(
+
+                                  borderRadius: const BorderRadius.all(
+                                    const Radius.circular(30.0),
+                                  ),
+                                ),
+                                filled: true,
+                                hintStyle: new TextStyle(color: Colors.grey[800]),
+                                hintText: "Type in your text",
+                                fillColor: Colors.white70),
+                          ),
+                        ),
+                      ),
+
+
+
+
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Text(
+                            'Already have an Account?',
                             style: TextStyle(
-                              color: AppConfig.primary_color,
+                                color:Colors.grey,
                               fontSize:  _height*0.02,
                             ),
                           ),
-                        ),
-                      ],
-                    ),
+                          GestureDetector(
+                            onTap: (){
+                              Navigator.pushNamed(context, '/Login');
+                            },
 
-                  ],
+                            child: Text(
+                              'LOGIN',
+                              style: TextStyle(
+                                color: AppConfig.primary_color,
+                                fontSize:  _height*0.02,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+
+                    ],
+                  ),
+
+
                 ),
 
 
-              ),
 
 
-
-
-              ClipRRect(
-                  borderRadius: BorderRadius.circular(30.0),
-                  child: Container(
-                    width: _width*0.8,
-                    height: _height*0.05,
-                    color: AppConfig.primary_color,
-                    child: FlatButton(
-                      onPressed: () {
-                        setState(() {
-                          _progressBarState = true;
-                        });
-
-                        _makePostRequest()
-                        .then((result) {
+                ClipRRect(
+                    borderRadius: BorderRadius.circular(30.0),
+                    child: Container(
+                      width: _width*0.8,
+                      height: _height*0.05,
+                      color: AppConfig.primary_color,
+                      child: FlatButton(
+                        onPressed: () {
                           setState(() {
-                            if(_progressBarState) {
-                              _progressBarState = false;
-                            }
+                            _progressBarState = true;
                           });
-                        });
-                      },
-                      child: _progressBarState
-                          ? CircularProgressIndicator()
-                      : Text(
-                        'SIGNUP',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize:  _height*0.02,
+
+                          _makePostRequest()
+                          .then((result) {
+                            setState(() {
+                              if(_progressBarState) {
+                                _progressBarState = false;
+                              }
+                            });
+                          });
+                        },
+                        child: _progressBarState
+                            ? CircularProgressIndicator()
+                        : Text(
+                          'SIGNUP',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize:  _height*0.02,
+                          ),
                         ),
+
                       ),
-
                     ),
-                  ),
-              ),
+                ),
 
 
 
@@ -239,7 +246,8 @@ class _SignUpPageState extends State<SignUpPage> {
 
 
 
-            ],
+              ],
+            ),
           ),
         ),
       ),
