@@ -5,6 +5,7 @@ import 'package:sidekick/NotesPage/NotesPage.dart';
 import 'package:flutter/services.dart';
 import 'package:sidekick/SubjectPage/SubjectPAge.dart';
 import 'constants/AppConfig.dart';
+import 'constants/Constants.dart';
 
 class NavBarPage extends StatefulWidget{
   @override
@@ -96,14 +97,47 @@ class _NavBarPageState extends State<NavBarPage> {
                       ),
                     ],
                   ),
-
-                  Container(
-                      child: Icon(
-                        Icons.more_vert,
-                        size: 30.0,
-                        color: AppConfig.primary_color,
-                      )
+                  PopupMenuButton<String>(
+                    onSelected: choiceAction,
+                    itemBuilder: (BuildContext context) {
+                      return Constants.choices.map((String choice) {
+                        return PopupMenuItem<String> (
+                          value:choice,
+                          child: GestureDetector(
+                            onTap: () {
+                              if(choice=='Logout') {
+                                print("hi");
+                                Navigator.pushNamed(context, '/');
+                              }
+                            },
+                            child: Text(choice,
+                              style: TextStyle(
+                                fontSize: _height/50,
+                                fontStyle: FontStyle.italic,
+                              ),
+                            ),
+                          ),
+                        );
+                      }).toList();
+                    },
+                    child: Icon(
+                      Icons.more_vert,
+                      size: 30.0,
+                      color: AppConfig.primary_color,
+                    ),
                   ),
+
+//                  Container(
+//                      child: GestureDetector(
+//                        onTap: choiceAction,
+//
+//                        child: Icon(
+//                          Icons.more_vert,
+//                          size: 30.0,
+//                          color: AppConfig.primary_color,
+//                        ),
+//                      )
+//                  ),
                 ],
               ),
             ),
@@ -174,5 +208,10 @@ class _NavBarPageState extends State<NavBarPage> {
         onTap: _onItemTapped,
       ),
     );
+  }
+
+
+  void choiceAction(String choice) {
+    print("Working");
   }
 }

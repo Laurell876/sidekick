@@ -298,8 +298,8 @@ class _SignUpPageState extends State<SignUpPage> {
     
     
     var client = http.Client();
-    String url = 'http://localhost:3001/user/signup';
-    
+    //String url = 'http://localhost:3001/user/signup';
+    String url = 'http://192.168.0.61:3001/user/signup'; //localhost has to be replaced with 10.0.2.2
     var response = await client
       .post(
       Uri.encodeFull(url),

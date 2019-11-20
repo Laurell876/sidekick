@@ -274,7 +274,7 @@ class _LoginPageState extends State<LoginPage> {
     };
 
     var client = http.Client();
-    String url = 'http://localhost:3001/user/login'; //localhost has to be replaced with 10.0.2.2
+    String url = 'http://192.168.0.61:3001/user/login'; //localhost has to be replaced with 10.0.2.2
 
     var response = await client
         .post(
@@ -293,7 +293,9 @@ class _LoginPageState extends State<LoginPage> {
     print(message);
 
     if(message == "Auth successful") {
-      await new Future.delayed(new Duration(milliseconds:1000), () {
+      print("hello");
+
+    await new Future.delayed(new Duration(milliseconds:1000), () {
         Alert(
           context: context,
           style: alertStyle,
@@ -329,7 +331,7 @@ class _LoginPageState extends State<LoginPage> {
           onPressed: () {
             Navigator.pushNamed(context, '/NavBarPage');
           },
-          width: w*0.6,
+
         )
 
 
@@ -358,7 +360,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
               color: AppConfig.primary_color,
               onPressed: () => Navigator.pop(context),
-              width: w*0.6,
+
             )
           ],
         ).show();
