@@ -55,7 +55,9 @@ class LoginAndSignUp extends StatelessWidget {
                    children: <Widget>[
 
                      GestureDetector(
-                       onTap: (){Navigator.pushNamed(context, '/SignUp');},
+                       onTap: (){
+                         Navigator.pushNamed(context, '/SignUp');
+                         },
                        child: Container(
                          width: _width*0.8,
                          height: _height*0.05,

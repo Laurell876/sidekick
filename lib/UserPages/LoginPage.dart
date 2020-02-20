@@ -178,7 +178,10 @@ class _LoginPageState extends State<LoginPage> {
 
 
                 GestureDetector(
-                  onTap: () {Navigator.pushNamed(context, '/NavBarPage');},
+                  onTap: () {
+                    Navigator.pushNamed(context, '/NavBarPage');
+                    }
+                    ,
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(30.0),
                     child: Container(
@@ -187,17 +190,18 @@ class _LoginPageState extends State<LoginPage> {
                       color:AppConfig.primary_color,
                       child: FlatButton(
                         onPressed: () {
-                          setState(() {
-                            _progressBarState = true;
-                          });
-                          _makePostRequest()
-                          .then((result) {
-                            setState(() {
-                              if (_progressBarState) {
-                                _progressBarState = false;
-                              }
-                            });
-                          });
+                          // setState(() {
+                          //   _progressBarState = true;
+                          // });
+                          // _makePostRequest()
+                          // .then((result) {
+                          //   setState(() {
+                          //     if (_progressBarState) {
+                          //       _progressBarState = false;
+                          //     }
+                          //   });
+                          // });
+                          Navigator.pushNamed(context, '/NavBarPage');
                         },
 
 

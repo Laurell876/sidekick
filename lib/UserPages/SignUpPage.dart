@@ -78,33 +78,6 @@ class _SignUpPageState extends State<SignUpPage> {
 
 
 
-//                    Container(
-//                      width: _width*0.9,
-//                      height: _height*0.09,
-//                      child: new TextField(
-//                        decoration: new InputDecoration(
-//                            labelText: 'USERNAME',
-//                            focusedBorder: OutlineInputBorder(
-//                              borderSide: const BorderSide(color: Colors.black, width: 2.0),
-//                              borderRadius: BorderRadius.circular(30.0),
-//                            ),
-//                            border: new OutlineInputBorder(
-//                              borderRadius: const BorderRadius.all(
-//                                const Radius.circular(30.0),
-//                              ),
-//                            ),
-//                            filled: true,
-//                            hintStyle: new TextStyle(color: Colors.grey[800]),
-//                            hintText: "Type in your text",
-//                            fillColor: Colors.white70),
-//                      ),
-//                    ),
-//
-//                    SizedBox(
-//                      height: _height*0.02,
-//                    ),
-
-
 
                       Padding(
                         padding: const EdgeInsets.all(8.0),
@@ -212,18 +185,19 @@ class _SignUpPageState extends State<SignUpPage> {
                       color: AppConfig.primary_color,
                       child: FlatButton(
                         onPressed: () {
-                          setState(() {
-                            _progressBarState = true;
-                          });
+                          // setState(() {
+                          //   _progressBarState = true;
+                          // });
 
-                          _makePostRequest()
-                          .then((result) {
-                            setState(() {
-                              if(_progressBarState) {
-                                _progressBarState = false;
-                              }
-                            });
-                          });
+                          // _makePostRequest()
+                          // .then((result) {
+                          //   setState(() {
+                          //     if(_progressBarState) {
+                          //       _progressBarState = false;
+                          //     }
+                          //   });
+                          // });
+                          Navigator.pushNamed(context, '/NavBarPage');
                         },
                         child: _progressBarState
                             ? CircularProgressIndicator()
